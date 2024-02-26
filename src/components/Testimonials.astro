@@ -1,0 +1,103 @@
+---
+
+---
+<div><br></div>
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    setTimeout(function(){
+        var replacers = document.querySelectorAll('[data-replace]');
+        for(var i=0; i<replacers.length; i++){
+            console.log('hit here2');
+            let replaceClasses = JSON.parse(replacers[i].dataset.replace.replace(/'/g, '"'));
+            Object.keys(replaceClasses).forEach(function(key) {
+                replacers[i].classList.remove(key);
+                replacers[i].classList.add(replaceClasses[key]);
+            });
+        }
+    }, 1);
+});
+</script>
+<h2 class="max-w-md text-5xl font-bold text-center sm:text-5sl sm:text-left text-slate-900 dark:text-white duration-700 relative transform opacity-0 transition-all translate-y-12 ease-out" data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100" }'>
+    	Our Team
+</h2> <br> <br>
+<div class="grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 duration-700 delay-150 relative transform transition-all opacity-0 translate-y-12 ease-out" data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100" }'>
+    <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Implementing CAN enabled Communication Protocol</h3>
+            <p class="my-4 font-light">"The implementation of the CAN communication protocol in our motor management system has been a game-changer. It ensures seamless and efficient data exchange, enabling real-time monitoring and control."</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center space-x-3">
+            <img class="rounded-full w-9 h-9" src="./naveen.jpg" alt="profile picture">
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+                <div>Naveen </div>
+                <div class="text-sm font-light text-gray-500 dark:text-gray-400">Team Captain, Hardware - Team Aurora</div>
+            </div>
+        </figcaption>    
+    </figure>
+    <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-tr-lg dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Advantage of Cross-Platform Compactability</h3>
+            <p class="my-4 font-light">"The adoption of a cross-platform motor management system has greatly streamlined our operations. It provides a unified interface accessible across different devices and platforms, enhancing flexibility and ease of use. This has not only simplified our motor monitoring but also improved overall efficiency in managing diverse systems."</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center space-x-3">
+            <img class="rounded-full w-9 h-9" src="./hrpw.jpg" alt="profile picture">
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+                <div>Aravind Miras</div>
+                <div class="text-sm font-light text-gray-500 dark:text-gray-400">Mobile Application Developer - Team Aurora</div>
+            </div>
+        </figcaption>    
+    </figure>
+    <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-bl-lg md:border-b-0 md:border-r dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Challenging Machine Learning Implementation</h3>
+            <p class="my-4 font-light">"I am thrilled to share my positive experience with the implementation of machine learning in predictive analysis for electric motors. This innovative approach has revolutionized our maintenance strategies, allowing us to predict and address potential issues before they become critical."</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center space-x-3">
+            <img class="rounded-full w-9 h-9" src="./naveenkumar.jpg" alt="profile picture">
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+                <div>Naveenkumar</div>
+                <div class="text-sm font-light text-gray-500 dark:text-gray-400">ML Developer - Team Aurora</div>
+            </div>
+        </figcaption>    
+    </figure>
+    <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Using NoSQL database for realtime monitoring</h3>
+            <p class="my-4 font-light">"Implementing a NoSQL real-time database in our motor management system has been a game-changer. The speed and flexibility it offers have significantly improved data handling, enabling real-time monitoring and analysis. This technology has not only enhanced the responsiveness of our motor management but also simplified the integration of dynamic data."</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center space-x-3">
+            <img class="rounded-full w-9 h-9" src="./usha.jpg" alt="profile picture">
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+                <div>Usha Kalathinathan</div>
+                <div class="text-sm font-light text-gray-500 dark:text-gray-400">Database Developer - Team Aurora</div>
+            </div>
+        </figcaption>    
+    </figure>
+    <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Integration of ML and AR/VR feature</h3>
+            <p class="my-4 font-light">"The integration of Machine Learning (ML) and Augmented Reality/Virtual Reality (AR/VR) in thermal mapping, without the need for additional sensors, has revolutionized our motor monitoring system. This innovative approach has empowered us to visualize and analyze thermal data in real-time, providing a comprehensive understanding of motor performance."</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center space-x-3">
+            <img class="rounded-full w-9 h-9" src="./rasika.png" alt="profile picture">
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+                <div>Rasika</div>
+                <div class="text-sm font-light text-gray-500 dark:text-gray-400">AR/VR Developer - Team Aurora</div>
+            </div>
+        </figcaption>    
+    </figure>
+    <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Kiosk Enabled Dashboard</h3>
+            <p class="my-4 font-light">"The user-friendly interface and accessibility of real-time data at kiosks have enhanced our monitoring capabilities. It provides a centralized and visual representation of motor performance, enabling quick decision-making. The kiosk dashboard has not only simplified the monitoring process but has also improved overall efficiency in managing and optimizing motor systems."</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center space-x-3">
+            <img class="rounded-full w-9 h-9" src="./som.jpg" alt="profile picture">
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+                <div>Soma Sundari</div>
+                <div class="text-sm font-light text-gray-500 dark:text-gray-400">Frontend Developer - Team Aurora</div>
+            </div>
+        </figcaption>    
+    </figure>
+    
+</div>

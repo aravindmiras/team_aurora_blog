@@ -1,0 +1,62 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Projects from '../components/Projects.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Aurora - Motor Management System</title>
+	<script src="https://unpkg.com/split-type"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function(){
+		setTimeout(function(){
+			var replacers = document.querySelectorAll('[data-replace]');
+			for(var i=0; i<replacers.length; i++){
+				console.log('hit here2');
+				let replaceClasses = JSON.parse(replacers[i].dataset.replace.replace(/'/g, '"'));
+				Object.keys(replaceClasses).forEach(function(key) {
+					replacers[i].classList.remove(key);
+					replacers[i].classList.add(replaceClasses[key]);
+				});
+			}
+		}, 1);
+	});
+	</script>
+</head>
+
+<body class="min-h-screen bg-slate-50 dark:bg-black">
+	<Header/>
+		<div><br></div>
+		<main class="max-w-4xl mx-auto">
+			<section id="hero" class="flex flex-col-reverse justify-center sm:flex-row px-6 items-center gap-8 mb-12">
+				<article class="sm:w-1/2 duration-700 relative transform opacity-0 transition-all translate-y-12 ease-out" data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100" }'>
+				<h2 class="max-w-md text-5xl font-bold text-center sm:text-5sl sm:text-left text-slate-900 dark:text-white">
+					Motor Management System for <span class="text-indigo-700 dark:text-indigo-300"> Electric Vehicles </span> 
+				</h2>
+				<p class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400">
+					"Revolutionize your ride with a Motor Management System that seamlessly bridges worlds — from the road to the digital realm. Embrace cross-platform compactibility and let augmented reality elevate your driving experience to new heights. It's not just a drive; it's a journey into the future of intelligent mobility."
+				</p>
+
+					<br>
+				</article>
+				<img src="./gandivacar.jpg" alt="team aurora" class="w-1/2 transition duration-300 ease-in-out hover:scale-110 duration-700 delay-150 relative transform transition-all opacity-0 translate-y-12 ease-out" data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100" }'>
+			</section>
+			<hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700duration-700 delay-150 relative transform transition-all opacity-0 translate-y-12 ease-out" data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100" }'>
+			<br><br>
+			<Projects/>
+			<br><br>
+			<hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700duration-700 delay-150 relative transform transition-all opacity-0 translate-y-12 ease-out" data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100" }'>
+			<br><br>
+			<Testimonials/>
+		</main>
+
+
+		<Footer/>
+</body>
+</html>
